@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shrink Effect</title>
+</head>
+<body>
+    <style>
+       .flex-container{
+            display: flex;
+            width: 800px;
+            border: 1px solid black;
+            gap: 5px ;
+            padding: 10px;
+       }
+       .flex-container>div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            /* flex-wrap: wrap; */
+       }
+       .flex-child-1{
+            background-color: #33b5ff;
+            flex-shrink: 1;
+            width: 200px;
+       }
+       .flex-child-2{
+            background-color: #33ff88;
+            flex-shrink: 2;
+            width: 150px;
+       }
+       .flex-child-3{
+            background-color: #ff33cc;
+            flex-shrink: 0;
+            width: 100px;
+       }
+       .flex-child-4{
+            background-color: #ff5733;
+            flex-shrink: 3;
+            width: 250px;
+       }
+    </style>
+
+    <div class="flex-container">
+        <div class="flex-child-1">Child 1</div>
+        <div class="flex-child-2">Child 2</div>
+        <div class="flex-child-3">Child 3</div>
+        <div class="flex-child-4">Child 4</div>
+      </div>
+     
+</body>
+</html>
+
+<!-- Objective: Investigate how flex children shrink when the flex container’s space is limited.
+ - Create a div container with four child div elements of various widths. 
+ - Apply flex-shrink to see which elements shrink more when the container size is reduced.
+ -->
